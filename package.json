@@ -1,7 +1,7 @@
 {
   "name": "trello-estimation-tool",
   "version": "1.0.0",
-  "description": "Tool used to assit in estimate tasks",
+  "description": "Converts Trello milestone tasks to new cards using a template card.",
   "main": "bin/start.js",
   "bin": {
     "trello-estimate": "bin/start.js"
