@@ -53,5 +53,5 @@ Create a **.env** using the format specified in **.env.sample**. Get your app ke
 Run it:
 
 ```bash
-trello-estimate-tool
+trello-estimate
 ```
