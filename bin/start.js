@@ -132,12 +132,6 @@ class Command {
         }
       ]);
     }).then(answers => {
-
-      // this.searchPattern = new RegExp(
-      //   (answers.restrictToUser ? `\\(@${this.user.username}\\)` : '\\(@[a-Z0-9]+\\)') +
-      //   (answers.restrictToEstimated ? ' - [0-9]+/[0-9]+$' : '( - [0-9]+/[0-9]+)?$')
-      // );
-
       // Get milestone cards
       trello.getListCards(answers.milestonesListId).then(cards => {
         let resolve = Promise.resolve();
@@ -252,7 +246,6 @@ class Command {
           let totals = {low: 0, high: 0};
           Object.keys(this.estimate).forEach(id => {
             if (this.estimate[id].tasks.length > 0) {
-              // data.push([log.chalk.bold(this.estimate[id].name), '', '', '']);
               data.push([this.estimate[id].name, '', '', '']);
               this.estimate[id].tasks.forEach(task => {
                 if (task.low + task.high > 0) {
@@ -265,12 +258,6 @@ class Command {
               });
             }
           });
-          // data.push([
-          //   log.chalk.bold('TOTALS'),
-          //   '',
-          //   log.chalk.bold(totals.low),
-          //   log.chalk.bold(totals.high)
-          // ]);
           data.push([
             'TOTALS',
             '',
