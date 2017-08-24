@@ -2,6 +2,8 @@
 
 Converts Trello milestone tasks to new cards using a template card.
 
+**Disclaimer:** This tool is not robust. It won't hold your hand if you don't supply Trello API keys and won't pick up tasks if you don't follow the format specified below. The tool was definitely built on the YAGNI principle.
+
 ## Board setup
 
 You need two things. A template card and one or more milestone cards.
@@ -45,6 +47,8 @@ Add to your PATH:
 ```bash
 npm link
 ```
+
+Create a **.env** using the format specified in **.env.sample**. Get your app key and user token from https://trello.com/app-key.
 
 Run it:
 
